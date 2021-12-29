@@ -3,7 +3,6 @@ import { useParams } from "react-router-dom";
 
 import Input from "../../shared/components/FormElements/Input";
 import Button from "../../shared/components/FormElements/Button";
-import Card from "../../shared/components/UIElements/Card";
 import {
   VALIDATOR_REQUIRE,
   VALIDATOR_MINLENGTH,
@@ -13,7 +12,7 @@ import "../pages/PlaceForm.css";
 
 const DUMMY_PLACES = [
   {
-    id: "pid1",
+    id: "p1",
     title: "Millennium",
     description: "Iconic skyscrapers in Bangkok",
     imageUrl: "https://i.ibb.co/7Jy9F8Y/millenniumresidencesukhumvit-2opt.jpg",
@@ -23,10 +22,10 @@ const DUMMY_PLACES = [
       lat: 13.7297181,
       lng: 100.5605296,
     },
-    creator: "uid1",
+    creator: "u1",
   },
   {
-    id: "pid2",
+    id: "p2",
     title: "Emp. State Building",
     description: "One of the most famous sky scrapers in the world!",
     imageUrl:
@@ -36,7 +35,7 @@ const DUMMY_PLACES = [
       lat: 40.7484405,
       lng: -73.9878584,
     },
-    creator: "uid2",
+    creator: "u2",
   },
 ];
 
@@ -61,21 +60,19 @@ const UpdatePlace = () => {
   const identifiedPlace = DUMMY_PLACES.find((p) => p.id === placeId);
 
   useEffect(() => {
-    if (identifiedPlace) {
-      setFormData(
-        {
-          title: {
-            value: identifiedPlace.title,
-            isValid: true,
-          },
-          description: {
-            value: identifiedPlace.description,
-            isValid: true,
-          },
+    setFormData(
+      {
+        title: {
+          value: identifiedPlace.title,
+          isValid: true,
         },
-        true
-      );
-    }
+        description: {
+          value: identifiedPlace.description,
+          isValid: true,
+        },
+      },
+      true
+    );
     setIsLoading(false);
   }, [setFormData, identifiedPlace]);
 
@@ -87,9 +84,7 @@ const UpdatePlace = () => {
   if (!identifiedPlace) {
     return (
       <div className="center">
-        <Card>
-          <h2>Could not find place!</h2>
-        </Card>
+        <h2>Could not find place!</h2>
       </div>
     );
   }

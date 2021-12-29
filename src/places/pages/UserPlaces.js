@@ -5,7 +5,7 @@ import PlaceList from "../components/PlaceList";
 
 const DUMMY_PLACES = [
   {
-    id: "pid1",
+    id: "p1",
     title: "Millennium",
     description: "Iconic skyscrapers in Bangkok",
     imageUrl: "https://i.ibb.co/7Jy9F8Y/millenniumresidencesukhumvit-2opt.jpg",
@@ -15,20 +15,20 @@ const DUMMY_PLACES = [
       lat: 13.7297181,
       lng: 100.5605296,
     },
-    creator: "uid1",
+    creator: "u1",
   },
   {
-    id: "pid2",
-    title: "Millennium",
-    description: "Iconic skyscrapers in Bangkok",
-    imageUrl: "https://i.ibb.co/7Jy9F8Y/millenniumresidencesukhumvit-2opt.jpg",
-    address:
-      "Sukhumvit 20 Alley, Khwaeng Khlong Toei, Khet Khlong Toei, Bangkok 10110, Thailand",
+    id: "p2",
+    title: "Empire State Building",
+    description: "One of the most famous sky scrapers in the world!",
+    imageUrl:
+      "https://upload.wikimedia.org/wikipedia/commons/thumb/d/df/NYC_Empire_State_Building.jpg/640px-NYC_Empire_State_Building.jpg",
+    address: "20 W 34th St, New York, NY 10001",
     location: {
-      lat: 13.7297181,
-      lng: 100.5605296,
+      lat: 40.7484405,
+      lng: -73.9878584,
     },
-    creator: "uid2",
+    creator: "u2",
   },
 ];
 
